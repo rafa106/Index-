@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprima Fácil</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            display: inline-block;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff9800;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comprima Fácil</h1>
+        <p>Faça o upload de suas imagens ou PDFs para compactação.</p>
+        <input type="file" id="fileInput" multiple>
+        <button onclick="compressFiles()">Comprimir</button>
+        <br>
+        <a id="downloadLink" style="display: none;"><button>Baixar Arquivo</button></a>
+    </div>
+    
+    <script>
+        function compressFiles() {
+            const fileInput = document.getElementById('fileInput');
+            if (fileInput.files.length === 0) {
+                alert("Selecione um arquivo primeiro!");
+                return;
+            }
+            alert("Compressão simulada! O arquivo seria compactado aqui.");
+            document.getElementById('downloadLink').style.display = 'block';
+            document.getElementById('downloadLink').href = '#'; // Substituir pelo link real
+        }
+    </script>
+</body>
+</html>
